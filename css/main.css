@@ -5,26 +5,28 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font: normal 100%/1.3 Ubuntu, sans-serif;
 }
 
 *, *::before, *::after {
-	box-sizing: inherit;
-}
-
-html {
-  font-family: "ubuntu", arial, sans-serif;
+  box-sizing: inherit;
 }
 
 body {
   margin: 0;
 }
 
-h1 {
+header {
+  background-color: #18294f;
+  color: #fff;
+}
+
+header h1 {
   display: block;
   color: #fff;
   background-color: #18294f;
@@ -38,6 +40,11 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+  font-size: 1.125rem;
+}
+
+nav a {
+  white-space: nowrap;
 }
 
 nav ul li a {
@@ -49,23 +56,78 @@ nav ul li a {
 li a {
   display: block;
   padding-left: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
 }
 
-@media only screen and (min-width:25em) {
+nav a:hover {
+  background-color: #6c8fe0;
+  color: #fff;
+}
 
-  nav ul li a {
+header {
+  background-color: #18294f;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 25em) {
+
+  nav ul li {
     float: left;
     width: 50%;
     text-align: center;
   }
 
+  nav ul {
+    font-size: 110%;
+  }
+
 }
 
-@media only screen and (min-width:38em) {
+@media only screen and (min-width: 38em) {
 
-  nav ul li a {
+  nav ul li {
     width: 25%;
+  }
+
+  nav ul {
+    font-size: 120%;
+  }
+
+  nav {
+    line-height: 1.4;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  nav ul li {
+    width: auto;
+    line-height: 1.5;
+    padding: 0.5em;
+  }
+
+  nav ul {
+    font-size: 130%;
+  }
+
+  header h1 {
+    display: inline-block;
+    float: left;
+    padding: 0.5em;
+  }
+
+  nav {
+    float: right;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  nav ul {
+    font-size: 140%;
   }
 
 }
